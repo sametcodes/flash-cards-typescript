@@ -1,5 +1,19 @@
-export default function Card({ question, onCorrect, onWrong }) {
-  const [correct, setCorrect] = React.useState(false);
+import React from 'react';
+
+type Question = {
+  id: number;
+  character: string;
+  quote: string;
+  image: string;
+}
+
+interface ICard{
+  question: Question;
+  onCorrect: () => void,
+  onWrong: () => void
+}
+
+export default function Card({ question, onCorrect, onWrong }: ICard) {
   const [inView, setInView] = React.useState(true);
 
   return (

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-function Header() {
+const Header: React.FC = (): JSX.Element => {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -21,7 +21,7 @@ function Header() {
         </div>
 
         <button
-          className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="flex items-center px-3 py-2 text-white border border-white rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg

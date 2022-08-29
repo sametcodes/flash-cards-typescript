@@ -1,7 +1,12 @@
-import Header from "./header";
-import Footer from "./footer";
+import React from 'react';
+import Header from "./Header";
+import Footer from "./Footer";
 
-function Layout(props) {
+type LayoutProps = {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = (props: LayoutProps): JSX.Element => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
